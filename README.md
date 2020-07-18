@@ -30,3 +30,8 @@ sprite := sprite32x32.Paletted{
 
 draw.Draw(dst, rect, sprite, image.ZP, draw.Src)
 ```
+
+## See Also
+
+Also see:
+* https://github.com/reiver/go-sprite8x8
