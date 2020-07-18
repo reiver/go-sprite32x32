@@ -28,9 +28,6 @@ func (receiver Paletted) At(x, y int) color.Color {
 }
 
 func (receiver Paletted) Bounds() image.Rectangle {
-	const width  = 32
-	const height = 32
-
 	const x = 0
 	const y = 0
 
