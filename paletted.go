@@ -16,6 +16,10 @@ type Paletted struct {
 	Category string
 
 	// ID is the ID of the sprite in the sprite sheet.
+	//
+	// The implication here is that there can only be 256 sprites
+	// in this sprite category, as a ‘uint8’ only has 256 values —
+	// 0 to 255.
 	ID uint8
 }
 
