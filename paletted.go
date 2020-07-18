@@ -10,7 +10,7 @@ type Paletted struct {
 	Pix []uint8
 
 	// Palette is the color palette used to resolve the colors.
-	Palette color.Palette
+	Palette Palette
 
 	// Sheet is the name of the sprite sheet.
 	Category string
@@ -26,7 +26,7 @@ type Paletted struct {
 func (receiver Paletted) At(x, y int) color.Color {
 	index := receiver.ColorIndexAt(x,y)
 
-	color := receiver.Palette[index]
+	color := receiver.Palette.Color(index)
 
 	return color
 }
