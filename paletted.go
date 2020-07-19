@@ -35,15 +35,15 @@ func (receiver Paletted) Bounds() image.Rectangle {
 	const x = 0
 	const y = 0
 
-	// [x,x+width) and [y,y+height)
+	// [x,x+Width) and [y,y+Height)
 	return image.Rectangle{
 		Min: image.Point{
 			X: x,
 			Y: y,
 		},
 		Max: image.Point{
-			X: x+width,
-			Y: y+height,
+			X: x+Width,
+			Y: y+Height,
 		},
 	}
 }
@@ -61,7 +61,7 @@ func (receiver Paletted) ColorModel() color.Model {
 }
 
 func (receiver Paletted) PixOffset(x int, y int) int {
-	return y*(width*depth) + x*depth
+	return y*(Width*Depth) + x*Depth
 }
 
 func (receiver Paletted) SpriteCategory() string {
