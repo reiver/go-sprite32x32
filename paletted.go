@@ -43,7 +43,7 @@ func (receiver Paletted) Bounds() image.Rectangle {
 		},
 		Max: image.Point{
 			X: x+width,
-			Y: y+width,
+			Y: y+height,
 		},
 	}
 }
