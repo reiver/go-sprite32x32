@@ -24,6 +24,10 @@ type Paletted struct {
 }
 
 func (receiver Paletted) At(x, y int) color.Color {
+	if ! (image.Point{X:x,Y:y}).In(receiver.Bounds()) {
+		return color.RGBA{0,0,0,0}
+	}
+
 	index := receiver.ColorIndexAt(x,y)
 
 	color := receiver.Palette.Color(index)
