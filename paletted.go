@@ -68,6 +68,17 @@ func (receiver Paletted) PixOffset(x int, y int) int {
 	return y*(Width*Depth) + x*Depth
 }
 
+func (receiver Paletted) Set(x, y int, c color.Color) {
+	offset := receiver.PixOffset(x,y)
+	if offset < 0 || len(receiver.Pix) <= offset {
+		return
+	}
+
+	index := receiver.Palette.Index(c)
+
+	receiver.Pix[offset] = index
+}
+
 func (receiver Paletted) SpriteCategory() string {
 	return receiver.Category
 }
